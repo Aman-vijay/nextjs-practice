@@ -21,9 +21,6 @@ const tables = await db.execute(sql`
 `);
 
 console.log("Neon connection successful");
-console.table(result);
-console.log("Detected app tables");
-console.table(tables);
 if (tables.rows.length !== 2) {
   process.exitCode = 1;
 }
