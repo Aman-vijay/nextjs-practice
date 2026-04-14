@@ -4,11 +4,11 @@ import { pgEnum, pgTable, text, timestamp, uuid,index,unique } from "drizzle-orm
 export const roleEnum = pgEnum("role", ["ADMIN", "MANAGER", "USER", "GUEST"]);
 
 
-
 export const users = pgTable("users", {
   id: uuid("id").defaultRandom().primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull().unique(),
+  password: text("password").notNull(), // ✅ ADD THIS
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow().notNull(),
 });

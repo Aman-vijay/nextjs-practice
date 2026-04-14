@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "bun run next dev",
     "dev:debug": "NEXT_TURBOPACK_TRACING=1 next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "bun run next start",
     "lint": "eslint",
     "type-check": "tsc --noEmit",
     "db:generate": "drizzle-kit generate",
@@ -27,7 +27,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/bcrypt": "^6.0.0",
-    "@types/node": "^20",
+    "@types/node": "^25.6.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "drizzle-kit": "^0.31.10",
